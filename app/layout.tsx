@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 
-const siteUrl = "https://video-tools-gratis.vercel.app";
+const siteUrl = "https://video-tools-five.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

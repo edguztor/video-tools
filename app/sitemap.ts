@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const base = "https://video-tools-gratis.vercel.app";
+const base = "https://video-tools-five.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const tools = ["comprimir", "convertir", "recortar", "audio", "gif", "silenciar", "resolucion", "rotar"];
