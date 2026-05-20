@@ -42,6 +42,30 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "VideoGratis",
+            "url": "https://video-tools-five.vercel.app",
+            "description": "Herramientas de video online gratuitas: comprime, convierte, recorta y edita videos sin registro.",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "MXN" },
+            "featureList": [
+              "Comprimir video sin perder calidad",
+              "Convertir formato de video MP4 WebM MOV",
+              "Recortar video por tiempo",
+              "Extraer audio MP3 WAV",
+              "Convertir video a GIF",
+              "Silenciar video",
+              "Cambiar resolución de video",
+              "Rotar o voltear video"
+            ]
+          })}}
+        />
         <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
           <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2 font-bold text-xl">

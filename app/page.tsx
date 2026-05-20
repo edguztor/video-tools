@@ -1,6 +1,11 @@
 "use client";
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import AdBanner from "../components/AdBanner";
+
+// 👉 Reemplaza este valor con tu Slot ID real de AdSense
+//    AdSense → Anuncios → Por unidad de anuncio → Anuncios display → copia el data-ad-slot
+const AD_SLOT = "2956781430";
 
 const ComprimirTool = dynamic(() => import("../components/ComprimirTool"), { ssr: false });
 const ConvertirTool = dynamic(() => import("../components/ConvertirTool"), { ssr: false });
@@ -151,6 +156,9 @@ export default function Home() {
         </div>
       ) : null}
 
+      {/* Anuncio superior */}
+      <AdBanner slot={AD_SLOT} format="horizontal" className="mb-8 rounded-xl overflow-hidden min-h-[90px] bg-gray-50" />
+
       {/* Tools grid */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {TOOLS.map(t => (
@@ -169,6 +177,9 @@ export default function Home() {
           </button>
         ))}
       </div>
+
+      {/* Anuncio entre grid e info */}
+      <AdBanner slot={AD_SLOT} format="rectangle" className="mt-10 rounded-xl overflow-hidden min-h-[250px] bg-gray-50" />
 
       {/* Info section */}
       <section className="mt-12 grid sm:grid-cols-3 gap-6 text-center">
